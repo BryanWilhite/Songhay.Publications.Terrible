@@ -1,0 +1,1 @@
+Hi there. I am [Bryan Wilhite](https://bryanwilhite.github.io/). The Songhay System starts with me. Check out my [technical Blog](https://songhayblog.azurewebsites.net/) once a month to glance at my Studio reports to get a snapshot of what is going on. I look forward to what is left of the 21<sup>st</sup> century, working through to future productions!

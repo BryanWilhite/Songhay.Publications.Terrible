@@ -1,0 +1,5 @@
+name,uri,description
+SonghayCore,https://github.com/BryanWilhite/SonghayCore,"core reusable, opinionated concerns for *all* 🧐 of my C# projects"
+songhay-core,https://github.com/BryanWilhite/songhay-core,"core, shared JS module for studio client-side projects"
+Songhay.Publications,https://github.com/BryanWilhite/Songhay.Publications,"Core reusable definitions for Songhay Studio Publications"
+songhay-web-components,https://github.com/BryanWilhite/songhay-web-components,"planting small shadow-tree seeds 🌱👁 and watching them grow in the manner of 🦉 the living standard"

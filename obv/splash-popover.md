@@ -1,0 +1,1 @@
+This is an old snapshot of mine of the contractor name tags I’ve collected over the years for my time at Fujitsu Ten (Torrance) and PIMCO (Newport Beach). I have two PIMCO name tags shown in the picture because I was there during PIMCO’s move into a brand new building with an incredible lecture hall and cafeteria.

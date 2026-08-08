@@ -1,0 +1,54 @@
+﻿.rx-webfont-downcome {
+    color: #DF713C;
+    font-family: 'Downcome', Sans-Serif;
+    font-weight: 100;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+div.command-flow {
+    text-align: center;
+}
+
+div > a.rx-webfont-downcome {
+    font-size: 2.3em;
+    margin: 2px 2em;
+}
+
+    div > a.rx-webfont-downcome > span.period.rx-webfont-rhesus {
+        font-size: 3.0em;
+    }
+
+h1.rx-webfont-downcome {
+    font-size: 7.6em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+
+    h1.rx-webfont-downcome {
+        font-size: 3.3em;
+    }
+}
+
+div.splash-flow {
+    text-align: center;
+}
+
+    div.splash-flow > img {
+        -moz-clip-path: polygon(15px 464px,595px 486px,598px 388px,601px 329px,606px 270px,616px 242px,618px 198px,617px 164px,628px 136px,648px 25px,648px 10px,629px 9px,462px 16px,104px 31px,6px 54px,1px 296px);
+        -webkit-clip-path: polygon(15px 464px,595px 486px,598px 388px,601px 329px,606px 270px,616px 242px,618px 198px,617px 164px,628px 136px,648px 25px,648px 10px,629px 9px,462px 16px,104px 31px,6px 54px,1px 296px);
+        clip-path: polygon(15px 464px,595px 486px,598px 388px,601px 329px,606px 270px,616px 242px,618px 198px,617px 164px,628px 136px,648px 25px,648px 10px,629px 9px,462px 16px,104px 31px,6px 54px,1px 296px);
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 4em;
+        width: auto\9; /* ie8 */
+    }
+
+@media only screen and (max-height: 320px) {
+    div.splash-flow > img {
+        display: none;
+    }
+}

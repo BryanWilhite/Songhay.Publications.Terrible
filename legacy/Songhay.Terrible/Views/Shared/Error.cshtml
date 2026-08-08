@@ -1,0 +1,25 @@
+﻿@{
+    this.ViewBag.Title = string.Concat(": Error on Action ", Model.ActionName);
+    this.Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model System.Web.Mvc.HandleErrorInfo
+<h2>Sorry, an error occurred while processing your request.</h2>
+<h3>
+    @string.Concat("Error on Action ", Model.ActionName)</h3>
+<div class="ServerError">
+    @Model.Exception.Message
+</div>
+
+@section StyleContent {
+    <style type="text/css">
+        .ServerError
+        {
+            background-color: #e0eee0;
+            color: Red;
+            font-size: 1.8em;
+            font-weight: bold;
+            overflow: auto;
+            padding: 1em;
+        }
+    </style>
+}

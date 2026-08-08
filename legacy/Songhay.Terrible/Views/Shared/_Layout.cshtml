@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="rxApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>In Our Terribleness</title>
+    <link rel="SHORTCUT ICON" href="@Url.Content("~/Content/app/img/songhay.ico")" />
+    @if (HttpContext.Current.IsDebuggingEnabled)
+    {
+        <link href="http://@Server.MachineName:8080/shared-styles/meyer-reset.css" rel="stylesheet" />
+        <link href="http://@Server.MachineName:8080/shared-styles/960fluid.css" rel="stylesheet" />
+        <link href="http://@Server.MachineName:8080/shared-styles-webfonts/zocial-flat.css" rel="stylesheet" />
+        <link href="http://@Server.MachineName:8080/shared-styles-webfonts/downcome-webfont.css" rel="stylesheet" />
+        <link href="http://@Server.MachineName:8080/shared-styles-webfonts/rhesus-webfont.css" rel="stylesheet" />
+    }
+    else
+    {
+        <link href="http://songhay.blob.core.windows.net/shared-styles/meyer-reset.css" rel="stylesheet" />
+        <link href="http://songhay.blob.core.windows.net/shared-styles/960fluid.css" rel="stylesheet" />
+        <link href="http://songhay.blob.core.windows.net/shared-styles-webfonts/zocial-flat.css" rel="stylesheet" />
+        <link href="http://songhay.blob.core.windows.net/shared-styles-webfonts/downcome-webfont.css" rel="stylesheet" />
+        <link href="http://songhay.blob.core.windows.net/shared-styles-webfonts/rhesus-webfont.css" rel="stylesheet" />
+    }
+    <style type="text/css">
+        * {
+            /* Trebuchet-based sans serif stack */
+            font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+            font-size: 62.5%;
+        }
+
+        html, body {
+            background-color: #1D2029;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        a, a:active, a:link, a:visited {
+            color: #DF713C;
+        }
+
+        .rx-webfont-rhesus {
+            font-family: 'Rhesus', Sans-Serif;
+            font-weight: 100;
+        }
+
+        #FooterBlock {
+            color: #242833;
+            font-size: 0.7em;
+            position: relative;
+            text-align: right;
+            z-index: 3;
+        }
+
+        @@media only screen and (max-width: 306px) {
+            #FooterBlock {
+                display: none;
+            }
+        }
+
+        #FooterBlock > div {
+            background-color: rgb(64, 32, 32);
+            height: 100%;
+        }
+
+            #FooterBlock > div > span {
+                color: #CBC0BC;
+                display: inline-block;
+                margin: 1em 0.25em 0 0;
+                position: relative;
+                vertical-align: middle;
+            }
+
+        #FooterBlock .songhay {
+            color: #006633;
+            font-size: 2.4em;
+            font-weight: bold;
+            line-height: 0.35em;
+        }
+
+            #FooterBlock .songhay > a:link,
+            #FooterBlock .songhay > a:visited {
+                color: #006633;
+                text-decoration: none;
+            }
+
+        @@media only screen and (max-width: 600px) {
+            #FooterBlock > div > span:first-child {
+                display: none;
+            }
+        }
+
+        #FooterBlock > div > span:last-child {
+            margin-right: 8px;
+        }
+
+        #PartialsFlow {
+            border-left: 8px solid #DF713C;
+            border-right: 8px solid #DF713C;
+            min-height: 100%;
+            position: relative;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto -4em;
+            z-index: 0;
+        }
+
+        #RandomFlow {
+            color: #DF713C;
+            display: inline-block;
+            float: right;
+            font-size: 7.2em;
+            margin-right: -2.5em;
+            position: relative;
+            line-height: 0;
+            top: 3em;
+            transform: rotate(-90deg);
+            /* Safari */
+            -webkit-transform: rotate(-90deg);
+            /* Firefox */
+            -moz-transform: rotate(-90deg);
+            /* IE */
+            -ms-transform: rotate(-90deg);
+            /* Opera */
+            -o-transform: rotate(-90deg);
+            /* Internet Explorer */
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+            z-index: 1;
+        }
+
+        @@media only screen and (max-width: 800px) {
+            #RandomFlow {
+                font-size: 3.1em;
+            }
+        }
+
+        #FooterBlock, #PartialsPushBlock {
+            height: 4em;
+        }
+    </style>
+    @RenderSection("StyleLinks", required: false)
+</head>
+<body>
+    <span class="rx-webfont-rhesus" id="RandomFlow">gesture</span>
+    <div class="container_12" id="PartialsFlow">
+        @RenderBody()
+        <div class="clear" id="PartialsPushBlock"></div>
+    </div>
+    <div class="container_12" id="FooterBlock">
+        <div>
+            <span><a href="https://twitter.com/KinteSpace" title="the kinté space on Twitter"><span class="zocial twitter icon"></span></a></span>
+            <span><a href="http://songhaysystem.com" title="another stone tribal move by Songhay System"><span class="songhay">(::)</span></a></span>
+            <span>Angular seed app: v</span><span data-app-version=""></span>
+        </div>
+    </div>
+    @if (HttpContext.Current.IsDebuggingEnabled)
+    {
+        <script src="http://@Server.MachineName:8080/shared-scripts-angular/angular.js"></script>
+        <script src="http://@Server.MachineName:8080/shared-scripts-angular/angular-route.js"></script>
+        <script src="http://@Server.MachineName:8080/shared-scripts-angular/angular-animate.js"></script>
+    }
+    else
+    {
+        <script src="http://songhay.blob.core.windows.net/shared-scripts-angular/angular.js"></script>
+        <script src="http://songhay.blob.core.windows.net/shared-scripts-angular/angular-route.js"></script>
+        <script src="http://songhay.blob.core.windows.net/shared-scripts-angular/angular-animate.js"></script>
+    }
+
+    <script src="@Url.Content("~/Content/app/js/app.js")"></script>
+    <script src="@Url.Content("~/Content/app/js/services.js")"></script>
+    <script src="@Url.Content("~/Content/app/js/controllers.js")"></script>
+    <script src="@Url.Content("~/Content/app/js/filters.js")"></script>
+    <script src="@Url.Content("~/Content/app/js/directives.js")"></script>
+</body>
+</html>
