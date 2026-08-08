@@ -1,0 +1,38 @@
+---
+import { appIndexSectionMap, AppIndexSections } from '../app'
+
+import { Navbar } from 'astro-bulma'
+import { AstroBulmaNavbarSlots } from '../astro-bulma-models'
+
+import LogoTypo from './LogoTypo.astro'
+import NavigationAnchor from './NavigationAnchor.astro'
+---
+
+<Navbar fixed='top'>
+    <LogoTypo slot={ AstroBulmaNavbarSlots.Brand } />
+    <Fragment slot={ AstroBulmaNavbarSlots.End }>
+        <NavigationAnchor
+            id={ AppIndexSections.bad }
+            text={ appIndexSectionMap.get(AppIndexSections.bad) } />
+        <NavigationAnchor
+            id={ AppIndexSections.superBad }
+            text={ appIndexSectionMap.get(AppIndexSections.superBad) } />
+        <NavigationAnchor
+            id={ AppIndexSections.terrible }
+            text={ AppIndexSections.terrible } />
+    </Fragment>
+</Navbar>
+
+<style lang="scss" is:global>
+    @use '../styles/core-module' as *;
+
+    main {
+        //`nav` height was manually measured to be 70.3333 pixels.
+        //the top padding is the closest multiple of line height greater than `nav` height:
+        padding-top: calc(($bulmaLineHeight) * 3);
+    }
+
+    .modal > .modal-content-block {
+        margin-top: calc(($bulmaLineHeight) * 3);
+    }
+</style>

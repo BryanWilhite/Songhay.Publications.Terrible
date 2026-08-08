@@ -1,0 +1,20 @@
+---
+const { id, text } = Astro.props
+---
+<span class="is-flex is-flex-direction-row is-align-items-center">
+    <a class="has-text-weight-light is-size-3 p-1 mr-6" href={ `#${id}` }>{ text }</a>
+</span>
+
+<style lang="scss">
+    @use '../styles/colors' as *;
+
+    a:link, a:visited {
+        color: $akyinkyin-light-tone;
+    }
+
+    a:hover {
+        background-color: $akyinkyin-light-tone;
+        color: $akyinkyin-dark-tone;
+    }
+
+</style>

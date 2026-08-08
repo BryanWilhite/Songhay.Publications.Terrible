@@ -1,0 +1,30 @@
+---
+import { App } from '../app';
+
+const { bulmaSize = 4 } = Astro.props;
+---
+
+<a href="/">
+    <div class={`logo is-flex is-flex-direction-row is-align-items-center is-justify-content-flex-end is-family-secondary is-size-${bulmaSize} px-6 py-3`} title={App.Title}>
+        <span class="has-text-weight-light is-hidden-touch">{ App.TitleParts.Prefix }</span>
+        <span class={`has-text-weight-bold is-hidden-touch is-size-${bulmaSize - 2}`}>{ App.TitleParts.Stem }</span>
+        <span>{ App.TitleParts.Suffix }</span>
+    </div>
+</a>
+
+<style lang="scss">
+    @use '../styles/colors' as *;
+
+    .logo {
+        white-space: nowrap;
+
+        &>span:nth-child(1),
+        &>span:nth-child(3) {
+            color: $akyinkyin-light-tint;
+        }
+
+        &>span:nth-child(2) {
+            color: $akyinkyin-light-tone;
+        }
+    }
+</style>
