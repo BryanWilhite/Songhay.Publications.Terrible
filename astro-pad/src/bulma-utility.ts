@@ -1,20 +1,21 @@
 export class BulmaUtility {
     static initializeBulma(): void {
-        const burger = document.querySelector('.navbar-burger') as HTMLAnchorElement;
+        const isActiveCssClass = 'is-active'
 
-        if (!burger) {
-            console.error('BulmaUtility:', {burger});
+        const nav = document.querySelector('.navbar') as HTMLElement
+        const burger = nav.querySelector('.navbar-burger') as HTMLAnchorElement
+        const navMenu = nav.querySelector('.navbar-menu') as HTMLDivElement
 
-            return;
+        if (!nav || !burger || !navMenu) {
+            console.error('BulmaUtility: could not find nav menu elements!',
+                { nav, burger, navMenu})
+
+            return
         }
 
-        const target = burger['dataset']['target'];
-        const nav = document.querySelector(`#${target}`);
-        const isActiveCssClass = 'is-active';
-
         burger?.addEventListener('click', () => {
-            burger.classList.toggle(isActiveCssClass);
-            nav?.classList.toggle(isActiveCssClass);
+            burger.classList.toggle(isActiveCssClass)
+            navMenu?.classList.toggle(isActiveCssClass)
         });
     }
 }

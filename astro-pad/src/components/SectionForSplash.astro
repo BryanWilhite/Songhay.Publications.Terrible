@@ -1,0 +1,75 @@
+---
+import LogoTypo from './LogoTypo.astro'
+
+import Image from 'astro/components/Image.astro'
+import IndexSplashImage from '../assets/index-splash-1600x1200.jpg'
+---
+
+<section class="fixed-grid has-1-cols splash">
+    <div class="grid">
+        <Image class="is-block"
+            src={IndexSplashImage}
+            alt="“hero” index splash"
+            layout="full-width"
+            />
+        <div class="splash-panel is-flex is-flex-direction-column is-justify-content-flex-start">
+            <div class="splash-info has-text-right me-2 my-6">
+                <button class="button is-ghost is-size-3" commandfor="splash-popover" command="show-popover">🖼️</button>
+            </div>
+        </div>
+        <div class="heading is-flex is-flex-direction-column is-justify-content-flex-end">
+            <h1 class="has-text-centered-mobile has-text-right-tablet m-6"><LogoTypo bulmaSize="2" /></h1>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    @use 'bulma/sass/utilities/initial-variables' as *;
+    @use '../styles/colors' as *;
+    @use '../styles/core-module' as *;
+
+    section.splash {
+        &.fixed-grid {
+            &>.grid {
+
+                &>div,
+                &>img {
+                    grid-area: 1 / 1;
+                    width: 100%;
+                }
+
+                &>div.splash-panel {
+
+                    background-color: rgba($color: $akyinkyin-background, $alpha: 0.7);
+
+                    &>.splash-info {
+                        &>button {
+                            opacity: 0.4;
+                        }
+
+                        &>button:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &>div.heading {
+                    //the following `calc` keeps .heading within the viewport (see `nav.scss`):
+                    max-height: calc(100vh - (($bulmaLineHeight) * 3));
+                }
+
+                &>div.heading>h1 {
+                    color: $akyinkyin-light-tone;
+
+                    & span {
+                        vertical-align: text-top;
+                    }
+                }
+            }
+        }
+    }
+
+    #splash-popover {
+        max-width: 800px;
+    }
+</style>

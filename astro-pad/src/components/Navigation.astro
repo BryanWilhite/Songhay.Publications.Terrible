@@ -1,29 +1,35 @@
 ---
 import { appIndexSectionMap, AppIndexSections } from '../app'
 
-import { Navbar } from 'astro-bulma'
-import { AstroBulmaNavbarSlots } from '../astro-bulma-models'
-
 import LogoTypo from './LogoTypo.astro'
 import NavigationAnchor from './NavigationAnchor.astro'
 ---
-
-<Navbar fixed='top'>
-    <LogoTypo slot={ AstroBulmaNavbarSlots.Brand } />
-    <Fragment slot={ AstroBulmaNavbarSlots.End }>
-        <NavigationAnchor
-            id={ AppIndexSections.bad }
-            text={ appIndexSectionMap.get(AppIndexSections.bad) } />
-        <NavigationAnchor
-            id={ AppIndexSections.superBad }
-            text={ appIndexSectionMap.get(AppIndexSections.superBad) } />
-        <NavigationAnchor
-            id={ AppIndexSections.terrible }
-            text={ AppIndexSections.terrible } />
-    </Fragment>
-</Navbar>
+<nav class="navbar is-fixed-top has-background-primary-light-invert">
+    <div class="navbar-brand">
+        <LogoTypo />
+        <a class="navbar-burger has-text-primary-40" role="button" aria-label="menu" aria-expanded="false" data-target="navMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end has-background-primary-light-invert">
+            <NavigationAnchor
+                id={ AppIndexSections.bad }
+                text={ appIndexSectionMap.get(AppIndexSections.bad) } />
+            <NavigationAnchor
+                id={ AppIndexSections.superBad }
+                text={ appIndexSectionMap.get(AppIndexSections.superBad) } />
+            <NavigationAnchor
+                id={ AppIndexSections.terrible }
+                text={ AppIndexSections.terrible } />
+        </div>
+    </div>
+</nav>
 
 <style lang="scss" is:global>
+    @use '../styles/colors' as *;
     @use '../styles/core-module' as *;
 
     main {
@@ -34,5 +40,9 @@ import NavigationAnchor from './NavigationAnchor.astro'
 
     .modal > .modal-content-block {
         margin-top: calc(($bulmaLineHeight) * 3);
+    }
+
+    .navbar-burger {
+        --bulma-navbar-burger-color: #{$akyinkyin-light-tint}
     }
 </style>

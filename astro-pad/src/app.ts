@@ -13,12 +13,12 @@ export class App {
 
 export enum AppIndexSections {
     bad = 'bad',
-    superBad = 'super-bad',
+    superBad = 'superbad',
     terrible = 'terrible'
 }
 
 export const appIndexSectionMap = new Map([
     [AppIndexSections.bad, AppIndexSections.bad],
-    [AppIndexSections.superBad, 'super bad'],
+    [AppIndexSections.superBad, AppIndexSections.superBad],
     [AppIndexSections.terrible, AppIndexSections.terrible],
 ])
