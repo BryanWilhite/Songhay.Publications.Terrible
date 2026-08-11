@@ -4,7 +4,7 @@ import { appIndexSectionMap, AppIndexSections } from '../app'
 import LogoTypo from './LogoTypo.astro'
 import NavigationAnchor from './NavigationAnchor.astro'
 ---
-<nav class="navbar is-fixed-top has-background-primary-light-invert">
+<nav class="navbar is-fixed-top">
     <div class="navbar-brand">
         <LogoTypo />
         <a class="navbar-burger has-text-primary-40" role="button" aria-label="menu" aria-expanded="false" data-target="navMenu">
@@ -14,7 +14,7 @@ import NavigationAnchor from './NavigationAnchor.astro'
         </a>
     </div>
     <div id="navMenu" class="navbar-menu">
-        <div class="navbar-end has-background-primary-light-invert">
+        <div class="navbar-end">
             <NavigationAnchor
                 id={ AppIndexSections.bad }
                 text={ appIndexSectionMap.get(AppIndexSections.bad) } />
@@ -43,6 +43,6 @@ import NavigationAnchor from './NavigationAnchor.astro'
     }
 
     .navbar-burger {
-        --bulma-navbar-burger-color: #{$akyinkyin-light-tint}
+        --bulma-navbar-burger-color: #{$terrible-color-base}
     }
 </style>
