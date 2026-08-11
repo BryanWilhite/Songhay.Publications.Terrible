@@ -12,14 +12,14 @@ import PngFeatherAndFedora from './assets/feather-and-fedora.png'
 import PngMicAndBeard from './assets/mic-and-beard.png'
 
 const CssBackgroundImages = {
-    pngEarAndBeard: PngEarAndBeard.src,
-    pngEyesAndStubble: PngEyesAndStubble.src,
-    pngFactoryAndBrokenWindow: PngFactoryAndBrokenWindow.src,
-    pngFactoryAndLightSwitch: PngFactoryAndLightSwitch.src,
-    pngFactoryCalendarAndDecember: PngFactoryCalendarAndDecember.src,
-    pngFactoryPillarAndBox: PngFactoryPillarAndBox.src,
-    pngFeatherAndFedora: PngFeatherAndFedora.src,
-    pngMicAndBeard: PngMicAndBeard.src
+    pngEarAndBeard: `url(${PngEarAndBeard.src})`,
+    pngEyesAndStubble: `url(${PngEyesAndStubble.src})`,
+    pngFactoryAndBrokenWindow: `url(${PngFactoryAndBrokenWindow.src})`,
+    pngFactoryAndLightSwitch: `url(${PngFactoryAndLightSwitch.src})`,
+    pngFactoryCalendarAndDecember: `url(${PngFactoryCalendarAndDecember.src})`,
+    pngFactoryPillarAndBox: `url(${PngFactoryPillarAndBox.src})`,
+    pngFeatherAndFedora: `url(${PngFeatherAndFedora.src})`,
+    pngMicAndBeard: `url(${PngMicAndBeard.src})`
 }
 
 import { rawContent as raw1 } from './md/1.md'
@@ -198,7 +198,7 @@ span.control {
 }
 
     .page.cover {
-        background-image: url(var(--pngEyesAndStubble));
+        background-image: var(--pngEyesAndStubble);
         background-position: 15% 5%;
     }
 
@@ -224,7 +224,7 @@ span.control {
     }
 
     #p01 {
-        background-image: url(var(--pngEarAndBeard));
+        background-image: var(--pngEarAndBeard);
         background-position: 0 0;
     }
 
@@ -234,7 +234,7 @@ span.control {
         }
 
     #p02 {
-        background-image: url(var(--pngFactoryPillarAndBox));
+        background-image: var(--pngFactoryPillarAndBox);
         background-position: 100% 0;
     }
 
@@ -244,7 +244,7 @@ span.control {
         }
 
     #p03 {
-        background-image: url(var(--pngFeatherAndFedora));
+        background-image: var(--pngFeatherAndFedora);
         background-position: 75% 60%;
     }
 
@@ -259,7 +259,7 @@ span.control {
     }
 
     #p05 {
-        background-image: url(var(--pngFactoryCalendarAndDecember));
+        background-image: var(--pngFactoryCalendarAndDecember);
         background-position: 100% 100%;
     }
 
@@ -269,7 +269,7 @@ span.control {
         }
 
     #p06 {
-        background-image: url(var(--pngMicAndBeard));
+        background-image: var(--pngMicAndBeard);
         background-position: 100% 10%;
     }
 
@@ -279,7 +279,7 @@ span.control {
         }
 
     #p07 {
-        background-image: url(var(--pngFactoryAndLightSwitch));
+        background-image: var(--pngFactoryAndLightSwitch);
         background-position: 0 0;
     }
 
@@ -290,7 +290,7 @@ span.control {
         }
 
     #p08 {
-        background-image: url(var(--pngFactoryAndBrokenWindow));
+        background-image: var(--pngFactoryAndBrokenWindow);
         background-position: 90% 90%;
     }
 
