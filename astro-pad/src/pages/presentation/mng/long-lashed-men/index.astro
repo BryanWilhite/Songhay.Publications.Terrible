@@ -1,4 +1,6 @@
 ---
+import Layout from '../../../../layouts/Layout.astro'
+import FooterBlock from '../../../../components/FooterBlock.astro'
 
 import PngEarAndBeard from './assets/ear-and-beard.png'
 import PngEyesAndStubble from './assets/eyes-and-stubble.png'
@@ -20,74 +22,77 @@ const CssBackgroundImages = {
     pngMicAndBeard: PngMicAndBeard.src
 }
 
-import { Content as Num1 } from './md/1.md'
-import { Content as Num2 } from './md/2.md'
-import { Content as Num3 } from './md/3.md'
-import { Content as Num4 } from './md/4.md'
-import { Content as Num5 } from './md/5.md'
-import { Content as Num6 } from './md/6.md'
-import { Content as Num7 } from './md/7.md'
-import { Content as Num8 } from './md/8.md'
-import { Content as Num9 } from './md/9.md'
+import { rawContent as raw1 } from './md/1.md'
+import { rawContent as raw2 } from './md/2.md'
+import { rawContent as raw3 } from './md/3.md'
+import { rawContent as raw4 } from './md/4.md'
+import { rawContent as raw5 } from './md/5.md'
+import { rawContent as raw6 } from './md/6.md'
+import { rawContent as raw7 } from './md/7.md'
+import { rawContent as raw8 } from './md/8.md'
+import { rawContent as raw9 } from './md/9.md'
 
 ---
 
-<div id="PresentationFlow" class="loading" data-rx-presentation="mcrawford-long-lashed-men">
-    <div id="CenteringFlow">
-        <div id="RatioContainerFlow">
-            <div id="RatioContainerHeightFlow"></div>
-            <div id="RatioDisplayFlow">
-                <div class="opaque cover page">
-                    <h1 class="rx-font-harting">long lashed men</h1>
-                    <h2 class="rx-font-harting">by Margo Natalie Crawford</h2>
+<Layout>
+    <div id="PresentationFlow" class="loading" data-rx-presentation="mcrawford-long-lashed-men">
+        <div id="CenteringFlow">
+            <div id="RatioContainerFlow">
+                <div id="RatioContainerHeightFlow"></div>
+                <div id="RatioDisplayFlow">
+                    <div class="opaque cover page">
+                        <h1 class="rx-font-harting">long lashed men</h1>
+                        <h2 class="rx-font-harting">by Margo Natalie Crawford</h2>
+                    </div>
+                    <div class="page">
+                        <pre class="verse rx-font-harting">{raw1()}</pre>
+                    </div>
+                    <div class="page">
+                        <pre class="verse rx-font-harting">{raw2()}</pre>
+                    </div>
+                    <div class="page">
+                        <pre class="verse rx-font-harting">{raw3()}</pre>
+                    </div>
+                    <div class="page">
+                        <pre class="verse rx-font-harting">{raw4()}</pre>
+                    </div>
+                    <div class="page">
+                        <pre class="verse rx-font-harting">{raw5()}</pre>
+                    </div>
+                    <div class="page">
+                        <pre class="verse rx-font-harting">{raw6()}</pre>
+                    </div>
+                    <div class="page">
+                        <pre class="verse rx-font-harting">{raw7()}</pre>
+                    </div>
+                    <div class="page">
+                        <pre class="verse rx-font-harting">{raw8()}</pre>
+                    </div>
+                    <div class="page">
+                        <pre class="verse rx-font-harting">{raw9()}</pre>
+                    </div>
+                    <div class="page credits">
+                        <p>
+                            <span>Words and Flow:</span> Margo Natalie Crawford
+                        </p>
+                        <p>
+                            <span>Original Photography:</span> <a href="http://www.flickr.com/photos/uicdigital/">UIC Digital Collections</a>, <a href="http://www.flickr.com/photos/readme/">Lisa Meader</a>, <a href="http://www.flickr.com/photos/slworking/">slworking2</a> and <a href="http://www.flickr.com/photos/sniecikowski/">Jacek Sniecikowski</a>.
+                        </p>
+                        <p>
+                            <span>Presentation:</span> Bryan Wilhite
+                        </p>
+                        <p>
+                            <a class="print" href="#/presentation-long-lashed-men-print">[view print presentation]</a>
+                        </p>
+                    </div>
+                    <span id="Previous" class="control">◄</span>
+                    <span id="Next" class="control">►</span>
                 </div>
-                <div class="page">
-                    <pre class="verse rx-font-harting"><Num1 /></pre>
-                </div>
-                <div class="page">
-                    <pre class="verse rx-font-harting"><Num2 /></pre>
-                </div>
-                <div class="page">
-                    <pre class="verse rx-font-harting"><Num3 /></pre>
-                </div>
-                <div class="page">
-                    <pre class="verse rx-font-harting"><Num4 /></pre>
-                </div>
-                <div class="page">
-                    <pre class="verse rx-font-harting"><Num5 /></pre>
-                </div>
-                <div class="page">
-                    <pre class="verse rx-font-harting"><Num6 /></pre>
-                </div>
-                <div class="page">
-                    <pre class="verse rx-font-harting"><Num7 /></pre>
-                </div>
-                <div class="page">
-                    <pre class="verse rx-font-harting"><Num8 /></pre>
-                </div>
-                <div class="page">
-                    <pre class="verse rx-font-harting"><Num9 /></pre>
-                </div>
-                <div class="page credits">
-                    <p>
-                        <span>Words and Flow:</span> Margo Natalie Crawford
-                    </p>
-                    <p>
-                        <span>Original Photography:</span> <a href="http://www.flickr.com/photos/uicdigital/">UIC Digital Collections</a>, <a href="http://www.flickr.com/photos/readme/">Lisa Meader</a>, <a href="http://www.flickr.com/photos/slworking/">slworking2</a> and <a href="http://www.flickr.com/photos/sniecikowski/">Jacek Sniecikowski</a>.
-                    </p>
-                    <p>
-                        <span>Presentation:</span> Bryan Wilhite
-                    </p>
-                    <p>
-                        <a class="print" href="#/presentation-long-lashed-men-print">[view print presentation]</a>
-                    </p>
-                </div>
-                <span id="Previous" class="control">◄</span>
-                <span id="Next" class="control">►</span>
             </div>
         </div>
     </div>
-</div>
+    <FooterBlock />
+</Layout>
 
 <style define:vars={CssBackgroundImages}>
 
