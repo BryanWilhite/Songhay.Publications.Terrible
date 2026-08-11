@@ -1,0 +1,19 @@
+---
+import { appIndexSectionMap, AppIndexSections } from '../app'
+import { Container } from 'astro-bulma';
+
+import ArticleBlock from './ArticleBlock.astro'
+import SectionHeader from './SectionHeader.astro'
+
+import { Content as BadNote } from '../../../obv/splash-bad.md'
+---
+
+<Container breakpoint='max-desktop' class:list={ AppIndexSections.bad }>
+    <SectionHeader
+        id={ AppIndexSections.bad }
+        text={ appIndexSectionMap.get(AppIndexSections.bad) }
+        />
+    <ArticleBlock>
+        <BadNote />
+    </ArticleBlock>
+</Container>

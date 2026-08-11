@@ -1,6 +1,0 @@
-enabled,name,sourceUri,snapshotUri
-false,codepen,http://codepen.io/rasx/public/feed/,
-true,flickr,http://api.flickr.com/services/feeds/photoset.gne?set=72157625087343217&nsid=7160940@N02&format=rss2&lang=en-us,https://songhaystorage.blob.core.windows.net/studio-dash/flickr.rss.xml
-true,github,https://github.com/BryanWilhite.atom,https://songhaystorage.blob.core.windows.net/studio-dash/github.atom.xml
-false,stackoverflow,https://stackoverflow.com/feeds/user/22944,
-true,studio,https://songhayblog.azurewebsites.net/entry/feed.xml,https://songhaystorage.blob.core.windows.net/studio-dash/studio.rss.xml

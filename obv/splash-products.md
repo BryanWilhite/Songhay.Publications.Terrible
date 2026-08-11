@@ -1,1 +1,0 @@
-The Songhay System is about investing in an open source base from which commercial products emerge. `SonghayCore` \[[GitHub](https://github.com/BryanWilhite/SonghayCore)\] represents the lowest level of this base, benefiting from over 15 years of research with leading companies across North America.

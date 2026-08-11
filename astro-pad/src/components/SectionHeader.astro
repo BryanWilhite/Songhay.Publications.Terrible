@@ -1,0 +1,13 @@
+---
+const { id, text } = Astro.props
+---
+<h2 id={ id } class="has-text-weight-light is-family-secondary is-size-2 is-size-4-touch ml-4 mt-6">{ text }</h2>
+
+<style lang="scss">
+    @use '../styles/colors' as *;
+
+    h2 {
+        color: $terrible-color-base;
+    }
+
+</style>

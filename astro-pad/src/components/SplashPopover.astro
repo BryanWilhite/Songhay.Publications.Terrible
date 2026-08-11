@@ -1,0 +1,20 @@
+---
+import { Content as PopoverNote } from '../../../obv/splash-popover.md';
+---
+<div id="splash-popover" popover class="message p-0">
+    <div class="message-header">
+        <p>about our splash image 🖼️</p>
+        <button class="delete is-size-4" aria-label="delete" commandfor="splash-popover" command="hide-popover" title="close this message">×</button>
+    </div>
+    <div class="message-body">
+        <div id="content" class="content">
+            <PopoverNote />
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    #splash-popover {
+        max-width: 800px;
+    }
+</style>

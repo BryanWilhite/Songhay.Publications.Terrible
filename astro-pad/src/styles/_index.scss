@@ -3,7 +3,8 @@
 @use 'colors' as *;
 
 @use 'bulma/sass/utilities' as * with (
-    $family-primary: 'Prompt'
+    $family-primary: 'Prompt',
+    $family-secondary: 'Patrick Hand SC'
 );
 
 @forward 'bulma/sass/base';
@@ -36,3 +37,4 @@
 @forward 'bulma/sass/themes';
 
 @import url('https://fonts.googleapis.com/css?family=Prompt:200,400,700');
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC:400');

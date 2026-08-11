@@ -1,1 +1,0 @@
-The Songhay System is about lifelong research. In addition to my ongoing [technical blog](https://songhayblog.azurewebsites.net/), here we have my curation of 3<sup>rd</sup>-party online tools and a syndicated feeds display for my latest activities online.
