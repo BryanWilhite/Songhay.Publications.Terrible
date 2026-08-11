@@ -1,0 +1,54 @@
+---
+import { App } from '../app'
+
+import {Image} from 'astro:assets'
+
+import BookCover2017 from '../assets/black-post-blackness.jpg'
+import BookCover2008 from '../assets/new-thoughts-book.jpg'
+---
+<footer class="footer">
+    <div class="container is_fluid">
+        <div class="columns">
+            <div class="column is-4">
+            </div>
+            <div class="column content is-4 is-size-7 has-text-centered">
+                <p>
+                    another stone tribal move by <a target="_blank" href="http://songhaysystem.com/">Songhay System</a>
+                </p>
+                <p>
+                    This presentation has been a project of<br /><a href="https://www.english.upenn.edu/people/margo-natalie-crawford">Dr. Margo Natalie Crawford</a>.
+                </p>
+            </div>
+            <div class="column is-4">
+            </div>
+        </div>
+        <div class="columns mt-4">
+            <div class="column is-4">
+                <div class="is-flex">
+                    <a class="is-inline-block is-flex-grow-0 is-flex-shrink-0 ml-4" href="https://www.english.upenn.edu/publications/2017/margo-natalie-crawford/black-post-blackness"><img alt="Black Post-Blackness: The Black Arts Movement and Twenty-First-Century Aesthetics" src={BookCover2017.src} /></a>
+                    <div class="content is-size-6 ml-4">
+                        Margo Natalie Crawford is the author of <a href="https://www.english.upenn.edu/publications/2017/margo-natalie-crawford/black-post-blackness"><em>Black Post-Blackness: The Black Arts Movement and Twenty-First-Century Aesthetics</em></a>.
+                    </div>
+                </div>
+            </div>
+            <div class="column is-4">
+            </div>
+            <div class="column is-4">
+                <div class="is-flex">
+                    <a class="is-inline-block is-flex-grow-0 is-flex-shrink-0 ml-4" href="https://www.english.upenn.edu/publications/2008/margo-natalie-crawford/new-thoughts-black-arts-movement"><Image alt="New Thoughts on the Black Arts Movement" src={BookCover2008} layout="full-width" /></a>
+                    <div class="content is-size-6 ml-4">
+                        Margo Natalie Crawford is the author of <a href="https://www.english.upenn.edu/publications/2008/margo-natalie-crawford/new-thoughts-black-arts-movement"><em>New Thoughts on the Black Arts Movement</em></a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style lang="scss">
+    @use '../styles/colors' as *;
+
+    a.is-inline-block {
+        width: 150px;
+    }
+</style>
