@@ -85,8 +85,11 @@ import { rawContent as raw9 } from './md/9.md'
                             <a class="print" href="#/presentation-long-lashed-men-print">[view print presentation]</a>
                         </p>
                     </div>
-                    <span id="Previous" class="control">◄</span>
-                    <span id="Next" class="control">►</span>
+                    <nav class="controls">
+                        <span id="Previous" class="control is-inline-block" title="move previous">◄</span>
+                        <a class="control is-inline-block" title="exit to splash" href="/">▼</a>
+                        <span id="Next" class="control is-inline-block" title="move next">►</span>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -236,15 +239,23 @@ import { rawContent as raw9 } from './md/9.md'
     font-weight: 100;
 }
 
-span.control {
+span.control, a.control {
     cursor: pointer;
-    display: inline-block;
     font-size: 120px;
     height: 120px;
-    position: absolute;
     width: 120px;
-    top: 77%;
-    z-index: 3;
+    position: relative;
+}
+
+    span.control:active, a.control:active {
+        font-size: 130px;
+    }
+
+    span.control:hover, a.control:hover {
+        color: greenyellow;
+    }
+
+span.control {
     transform: scale(0.5,1); /* W3C */
     -webkit-transform: scale(0.5,1); /* Safari and Chrome */
     -moz-transform: scale(0.5,1); /* Firefox */
@@ -252,20 +263,20 @@ span.control {
     -o-transform: scale(0.5,1); /* Opera */
 }
 
-    span.control:active {
-        font-size: 130px;
-    }
-
-    span.control:hover {
-        color: greenyellow;
-    }
-
-#Next {
-    left: 15%;
+a.control {
+    transform: scale(.7,0.5); /* W3C */
+    -webkit-transform: scale(.7,0.5); /* Safari and Chrome */
+    -moz-transform: scale(.7,0.5); /* Firefox */
+    -ms-transform: scale(.7,0.5); /* IE 9 */
+    -o-transform: scale(.7,0.5); /* Opera */
 }
 
-#Previous {
-    left: 5%;
+nav.controls {
+    cursor: auto;
+    position: absolute;
+    top: 77%;
+    width: 360px;
+    z-index: 3;
 }
 
 .page {
