@@ -95,10 +95,85 @@ import { rawContent as raw9 } from './md/9.md'
 </Layout>
 
 <script>
-    const presentationFlow = document.getElementById('PresentationFlow') as HTMLDivElement
+    class PresentationUtility {
 
-    presentationFlow.classList.toggle('loading')
+        static initialize() {
+            PresentationUtility.presentationFlow = document.getElementById('PresentationFlow') as HTMLDivElement
 
+            if(!PresentationUtility.presentationFlow) {
+
+                console.error('The expected PresentationFlow element is not here!')
+
+                return
+            }
+
+            PresentationUtility.presentationFlow.classList.toggle('loading')
+
+            PresentationUtility.presentationPages = Array.from(PresentationUtility.presentationFlow.querySelectorAll('div.page'))
+
+            if(PresentationUtility.presentationPages.length < 1) {
+
+                console.error('The expected Presentation pages are not here!')
+
+                return
+            }
+
+            PresentationUtility.previous = document.getElementById('Previous') as HTMLSpanElement
+
+            PresentationUtility.next = document.getElementById('Next') as HTMLSpanElement
+
+            if(!PresentationUtility.previous || !PresentationUtility.next) {
+
+                console.error('The expected Presentation controls are not here!')
+
+                return
+            }
+
+            PresentationUtility.previous.addEventListener('click', PresentationUtility.doPrevious)
+            PresentationUtility.next.addEventListener('click', PresentationUtility.doNext)
+        }
+
+        static doPrevious() {
+            const opaque = 'opaque'
+
+            const activePage = PresentationUtility.presentationPages
+                .find(p => p.classList.contains(opaque))
+
+            let activePagePreviousSibling = activePage?.previousElementSibling
+
+            if(!activePagePreviousSibling) {
+                activePagePreviousSibling = PresentationUtility.presentationPages.at(-1)
+            }
+
+            activePage?.classList.toggle(opaque)
+            activePagePreviousSibling?.classList.toggle(opaque)
+        }
+
+        static doNext() {
+            const opaque = 'opaque'
+
+            const activePage = PresentationUtility.presentationPages
+                .find(p => p.classList.contains(opaque))
+
+            let activePageNextSibling = activePage?.nextElementSibling
+
+            if(!activePageNextSibling) {
+                activePageNextSibling = PresentationUtility.presentationPages.at(0)
+            }
+
+            activePage?.classList.toggle(opaque)
+            activePageNextSibling?.classList.toggle(opaque)
+        }
+
+        static presentationFlow: HTMLDivElement
+
+        static presentationPages: HTMLDivElement[]
+
+        static previous: HTMLSpanElement
+        static next: HTMLSpanElement
+    }
+
+    PresentationUtility.initialize();
 </script>
 
 <style define:vars={CssBackgroundImages}>
